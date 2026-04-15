@@ -38,6 +38,8 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-logo img {
@@ -254,6 +256,9 @@ a { color: inherit; text-decoration: none; }
 
 .event-item-partner em { color: var(--gold); font-style: normal; }
 
+.partner-link { color: inherit; text-decoration: none; }
+.partner-link:hover em { text-decoration: underline; text-underline-offset: 2px; }
+
 .event-link {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -452,12 +457,23 @@ footer {
   .section-grid,
   .home-apply-strip,
   .events-intro,
-  .events-list-header,
-  .event-item,
   .bookclub-intro-section,
   .sessions-section,
   .backlog-section,
   footer { padding-left: 20px; padding-right: 20px; }
+
+  /* Events table → stacked mobile layout */
+  .events-list-header { display: none; }
+  .event-item {
+    display: block;
+    padding: 16px 20px;
+  }
+  .event-item-meta {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .event-item-name { display: block; }
 
   .sessions-table { display: block; overflow-x: auto; }
   .footer-cols { gap: 36px; }
