@@ -399,6 +399,15 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.01em;
 }
 
+.backlog-read {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
 /* ── FOOTER ──────────────────────────────────────── */
 footer {
   border-top: 0.5px solid var(--rule);
