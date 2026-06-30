@@ -369,6 +369,16 @@ a { color: inherit; text-decoration: none; }
 .backlog-section { padding: 56px 48px 88px; }
 .backlog-list { list-style: none; }
 
+.backlog-group-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray);
+  padding: 40px 0 4px;
+}
+.backlog-group-label:first-child { padding-top: 0; }
+
 
 .backlog-item {
   display: flex;
