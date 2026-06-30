@@ -379,7 +379,7 @@ a { color: inherit; text-decoration: none; }
 }
 .backlog-group-label:first-child { padding-top: 0; }
 
-.backlog-section .label { font-size: 16px; letter-spacing: 0.14em; margin-bottom: 40px; }
+.backlog-section .label { font-size: 28px; letter-spacing: 0.08em; margin-bottom: 40px; }
 
 
 .backlog-item {
