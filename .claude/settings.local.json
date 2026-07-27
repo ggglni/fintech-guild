@@ -6,7 +6,13 @@
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
       "Bash(git push:*)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild diff)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild log --oneline -5)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild add book-club.html)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild commit -m ' *)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild push)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild add styles.css)"
     ]
   }
 }
