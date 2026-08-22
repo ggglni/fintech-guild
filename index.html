@@ -36,6 +36,9 @@
     <li><a href="events.html">Events</a></li>
     <li><a href="book-club.html">Book Club</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <main>
@@ -102,5 +105,23 @@
   <p class="footer-copy">&copy; 2026 Fintech Guild. All rights reserved.</p>
 </footer>
 
+<script>
+  (function() {
+    var btn = document.querySelector('.nav-hamburger');
+    var nav = document.querySelector('.nav');
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav--open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        nav.classList.remove('nav--open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  })();
+</script>
 </body>
 </html>
