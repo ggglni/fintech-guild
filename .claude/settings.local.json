@@ -12,7 +12,10 @@
       "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild add book-club.html)",
       "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild commit -m ' *)",
       "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild push)",
-      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild add styles.css)"
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild add styles.css)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild status)",
+      "Skill(claude-in-chrome)",
+      "Bash(git -C /Users/ggglni/Documents/Websites/fintech-guild add styles.css index.html events.html book-club.html admission.html)"
     ]
   }
 }
