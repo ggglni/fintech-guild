@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="&quot;Is Crypto Eating Finance?&quot; A Debate — a Fintech Guild debate with BCB Group at the intersection of TradFi and DeFi.">
+  <title>"Is Crypto Eating Finance?" A Debate — Fintech Guild</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MH02HBXEP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MH02HBXEP3');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-left" href="../index.html">
+    <div class="nav-logo">
+      <img src="../logo.png" alt="Fintech Guild"
+           onerror="this.outerHTML='<div class=nav-logo-fallback></div>'">
+    </div>
+    <span class="nav-brand">Fintech Guild</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../admission.html">Admission</a></li>
+    <li><a href="../events.html" class="active">Events</a></li>
+    <li><a href="../book-club.html">Book Club</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+
+  <a class="event-detail-back" href="../events.html">&larr;&nbsp; Back to Events</a>
+
+  <div class="event-detail-hero">
+    <div class="event-detail-hero-content">
+      <span class="label label--gold">Fintech Guild &times; BCB Group</span>
+      <h1 class="event-detail-title">"Is Crypto Eating Finance?"</h1>
+      <p class="event-detail-tagline">A Debate</p>
+      <ul class="event-detail-meta">
+        <li>London &middot; October 2025</li>
+      </ul>
+      <p class="event-detail-brief body-serif">A debate on whether crypto is eating traditional finance &mdash; bringing together operators from BCB Group, Coinbase, Ripple, and Due for a candid conversation at the intersection of TradFi and DeFi.</p>
+    </div>
+    <div class="event-detail-hero-image">
+      <img src="../images/events/crypto-debate/flyer.png" alt="&quot;Is Crypto Eating Finance?&quot; A Debate event card">
+    </div>
+  </div>
+
+  <div class="event-detail-stats">
+    <div class="event-detail-stat">
+      <span class="event-detail-stat-value">Sold Out</span>
+      <span class="event-detail-stat-label">Status</span>
+    </div>
+    <div class="event-detail-stat">
+      <span class="event-detail-stat-value">180+</span>
+      <span class="event-detail-stat-label">Applications</span>
+    </div>
+    <div class="event-detail-stat">
+      <span class="event-detail-stat-value">40</span>
+      <span class="event-detail-stat-label">Attendees</span>
+    </div>
+    <div class="event-detail-stat">
+      <span class="event-detail-stat-value">Oct '25</span>
+      <span class="event-detail-stat-label">13 October 2025</span>
+    </div>
+  </div>
+
+  <div class="event-detail-scroll-gallery" id="eventGallery">
+    <img src="../images/events/crypto-debate/debate1.jpeg" alt="Panel debate at Is Crypto Eating Finance?, London">
+    <img src="../images/events/crypto-debate/debate2.jpeg" alt="Panelists debating at Is Crypto Eating Finance?">
+    <img src="../images/events/crypto-debate/networking.jpeg" alt="Guests networking at Is Crypto Eating Finance?">
+    <img src="../images/events/crypto-debate/netoworking2.jpeg" alt="Guests networking at Is Crypto Eating Finance?">
+  </div>
+
+  <div class="event-detail-gallery-dots" id="eventGalleryDots">
+    <button type="button" aria-label="Photo 1" class="active"></button>
+    <button type="button" aria-label="Photo 2"></button>
+    <button type="button" aria-label="Photo 3"></button>
+    <button type="button" aria-label="Photo 4"></button>
+  </div>
+
+  <script>
+    (function () {
+      var gallery = document.getElementById('eventGallery');
+      var dots = document.querySelectorAll('#eventGalleryDots button');
+      var imgs = gallery.querySelectorAll('img');
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          imgs[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        });
+      });
+
+      function updateActiveDot() {
+        var center = gallery.getBoundingClientRect().left + gallery.clientWidth / 2;
+        var closest = 0;
+        var closestDist = Infinity;
+        imgs.forEach(function (img, i) {
+          var rect = img.getBoundingClientRect();
+          var dist = Math.abs(rect.left + rect.width / 2 - center);
+          if (dist < closestDist) { closestDist = dist; closest = i; }
+        });
+        dots.forEach(function (dot, i) { dot.classList.toggle('active', i === closest); });
+      }
+
+      var ticking = false;
+      gallery.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(function () { updateActiveDot(); ticking = false; });
+          ticking = true;
+        }
+      });
+    })();
+  </script>
+
+  <div class="event-detail-cta">
+    <a href="https://luma.com/eedpiag0" target="_blank" rel="noopener" class="btn-calendar">
+      &nearr;&nbsp; View on Luma
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-cols">
+    <div>
+      <p class="footer-col-label">Let&rsquo;s Talk</p>
+      <ul class="footer-contacts">
+        <li><a href="mailto:info@fintechguild.com">info@fintechguild.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-label">Join Us</p>
+      <a href="https://airtable.com/appJD0GFhPhD1K06I/pagHPukhxtqBNpMT9/form"
+         target="_blank" rel="noopener" class="footer-apply-link">Apply here &rarr;</a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Fintech Guild. All rights reserved.</p>
+</footer>
+
+<script>
+  (function() {
+    var btn = document.querySelector('.nav-hamburger');
+    var nav = document.querySelector('.nav');
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav--open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        nav.classList.remove('nav--open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
