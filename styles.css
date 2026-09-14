@@ -454,28 +454,6 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
 }
 
-/* ── BOOK CLUB ───────────────────────────────────── */
-.bookclub-intro-section {
-  padding: 64px 48px;
-  border-bottom: 0.5px solid var(--rule);
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.bookclub-desc {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(17px, 1.7vw, 21px);
-  line-height: 1.7;
-}
-
-.bookclub-meta {
-  font-size: 12px;
-  color: var(--black);
-  letter-spacing: 0.06em;
-  line-height: 1.7;
-}
-
 .btn-calendar {
   display: inline-flex;
   align-items: center;
@@ -495,102 +473,6 @@ a { color: inherit; text-decoration: none; }
 .btn-calendar:hover {
   background: var(--gold);
   border-color: var(--gold);
-}
-
-/* Sessions table */
-.sessions-section {
-  padding: 56px 48px;
-  border-bottom: 0.5px solid var(--rule);
-}
-
-.sessions-section .label { margin-bottom: 24px; }
-
-.sessions-table { width: 100%; border-collapse: collapse; }
-
-.sessions-table th {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gray);
-  font-weight: 400;
-  text-align: left;
-  padding: 0 20px 14px 0;
-  border-bottom: 0.5px solid var(--rule);
-}
-
-.sessions-table th:last-child { padding-right: 0; }
-
-.sessions-table td {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(15px, 1.5vw, 18px);
-  padding: 18px 20px 18px 0;
-  border-bottom: 0.5px solid var(--rule);
-  vertical-align: top;
-  line-height: 1.4;
-}
-
-.sessions-table td:last-child { padding-right: 0; }
-
-.sessions-table td.mono {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--gray);
-  letter-spacing: 0.04em;
-}
-
-/* Backlog */
-.backlog-section { padding: 56px 48px 88px; }
-.backlog-list { list-style: none; }
-
-.backlog-group-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gray);
-  padding: 40px 0 4px;
-}
-.backlog-group-label:first-child { padding-top: 0; }
-
-.backlog-section .label { font-size: 28px; letter-spacing: 0.08em; margin-bottom: 40px; }
-
-
-.backlog-item {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 9px 0;
-  border-bottom: 0.5px solid var(--rule);
-  flex-wrap: wrap;
-}
-
-.backlog-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: clamp(15px, 1.4vw, 17px);
-}
-
-.backlog-author {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(14px, 1.3vw, 16px);
-  color: var(--gray);
-}
-
-.backlog-desc {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--gray);
-  letter-spacing: 0.01em;
-}
-
-.backlog-read {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--gold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 /* ── ADMISSION ───────────────────────────────────── */
@@ -724,9 +606,6 @@ footer {
   .section-grid,
   .home-apply-strip,
   .events-intro,
-  .bookclub-intro-section,
-  .sessions-section,
-  .backlog-section,
   .event-detail-back,
   .event-detail-hero,
   .event-detail-cta,

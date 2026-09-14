@@ -8,7 +8,6 @@ Website for [fintechguild.com](https://fintechguild.com) — a private community
 |------|-----|
 | `index.html` | `/` — Home |
 | `events.html` | `/events` — Past and upcoming events |
-| `book-club.html` | `/book-club` — Monthly reading group |
 
 ## Stack
 
