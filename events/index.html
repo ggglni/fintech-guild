@@ -43,10 +43,15 @@
 <main>
 
   <div class="events-intro">
-    <p class="body-serif">We organise a range of events for Guild members — from pitch sessions and conference side events to informal social gatherings in cities around the world.</p>
-    <a href="https://luma.com/calendar/cal-1YGfUU9aFsu0OkM" target="_blank" rel="noopener" class="btn-calendar">
-      &nearr;&nbsp; See Next Events
-    </a>
+    <p class="body-serif">We organise a range of events for Guild members — from pitch sessions and conference side events to informal social gatherings in cities around the world. Interested in collaborating? Reach out.</p>
+    <div class="events-intro-actions">
+      <a href="https://luma.com/calendar/cal-1YGfUU9aFsu0OkM" target="_blank" rel="noopener" class="btn-calendar">
+        &nearr;&nbsp; See Next Events
+      </a>
+      <a href="mailto:info@fintechguild.com?subject=Partnering%20with%20Fintech%20Guild" class="btn-calendar btn-calendar--outline">
+        &rarr;&nbsp; Partner with Us
+      </a>
+    </div>
   </div>
 
   <div class="events-table">
@@ -103,6 +108,55 @@
     </li>
   </ul>
   </div>
+
+  <section class="partner-quotes" aria-label="What our partners say about us">
+    <span class="label label--gold">What our partners say about us</span>
+    <div class="partner-quotes-track" id="partnerQuotes">
+      <figure class="partner-quote active">
+        <blockquote>&ldquo;Partnering with the Fintech Guild in Singapore was a great opportunity to bring together a carefully curated group of hand-picked industry leaders for meaningful conversations and knowledge sharing. The event highlights the value of bringing the right people together to spark collaboration and new opportunities across the fintech ecosystem.&rdquo;</blockquote>
+        <figcaption>&mdash;&nbsp; M0 &middot; <a href="/events/stablecoins/">Stablecoins: from Tokens to Rails</a></figcaption>
+      </figure>
+      <figure class="partner-quote">
+        <blockquote>&ldquo;Our Agentic Payments event with the Fintech Guild was sharp, well-curated, and exactly the kind of room where real conversations happen. Giorgio has no patience for filler, and it shows. The community is active and engaged &mdash; we&rsquo;re already looking forward to the next one.&rdquo;</blockquote>
+        <figcaption>&mdash;&nbsp; 13books Capital &middot; <a href="/events/agentic-payments/">The Rise of Agentic Payments</a></figcaption>
+      </figure>
+    </div>
+    <div class="event-detail-gallery-dots" id="partnerQuotesDots">
+      <button type="button" aria-label="Quote 1" class="active"></button>
+      <button type="button" aria-label="Quote 2"></button>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var section = document.querySelector('.partner-quotes');
+      var quotes = document.querySelectorAll('#partnerQuotes .partner-quote');
+      var dots = document.querySelectorAll('#partnerQuotesDots button');
+      var current = 0;
+      var timer = null;
+
+      function show(i) {
+        current = (i + quotes.length) % quotes.length;
+        quotes.forEach(function (q, j) { q.classList.toggle('active', j === current); });
+        dots.forEach(function (d, j) { d.classList.toggle('active', j === current); });
+      }
+
+      function start() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        stop();
+        timer = setInterval(function () { show(current + 1); }, 8000);
+      }
+
+      function stop() { clearInterval(timer); }
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { show(i); start(); });
+      });
+      section.addEventListener('mouseenter', stop);
+      section.addEventListener('mouseleave', start);
+      start();
+    })();
+  </script>
 
 </main>
 
