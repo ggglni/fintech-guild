@@ -129,14 +129,17 @@
 
   <script>
     (function () {
-      var section = document.querySelector('.partner-quotes');
       var quotes = document.querySelectorAll('#partnerQuotes .partner-quote');
       var dots = document.querySelectorAll('#partnerQuotesDots button');
       var current = 0;
       var timer = null;
 
       function show(i) {
-        current = (i + quotes.length) % quotes.length;
+        var next = (i + quotes.length) % quotes.length;
+        if (next === current) return;
+        quotes.forEach(function (q) { q.classList.remove('leaving'); });
+        quotes[current].classList.add('leaving');
+        current = next;
         quotes.forEach(function (q, j) { q.classList.toggle('active', j === current); });
         dots.forEach(function (d, j) { d.classList.toggle('active', j === current); });
       }
@@ -144,16 +147,13 @@
       function start() {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         stop();
-        timer = setInterval(function () { show(current + 1); }, 8000);
+        clearInterval(timer);
+        timer = setInterval(function () { show(current + 1); }, 7000);
       }
-
-      function stop() { clearInterval(timer); }
 
       dots.forEach(function (dot, i) {
         dot.addEventListener('click', function () { show(i); start(); });
       });
-      section.addEventListener('mouseenter', stop);
-      section.addEventListener('mouseleave', start);
       start();
     })();
   </script>
